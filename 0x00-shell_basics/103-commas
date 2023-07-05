@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -anm -w 1 -X ./
+ls -xamp
