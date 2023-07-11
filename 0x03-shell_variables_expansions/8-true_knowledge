@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $RUEKNOWLEDGE + 128 '\n'
+echo $TRUEKNOWLEDGE + 128 '\n'
