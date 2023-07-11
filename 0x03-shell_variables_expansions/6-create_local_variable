@@ -1,2 +1,2 @@
 #!/bin/bash
-alias BEST="touch School"
+alias BEST=School
