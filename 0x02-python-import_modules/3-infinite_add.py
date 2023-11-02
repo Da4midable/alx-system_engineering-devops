@@ -4,5 +4,4 @@ if __name__ == "__main__":
     res_add = 0
     for i in range(1, len(sys.argv)):
         res_add += int(sys.argv[i])
-        
     print("{:d}".format(res_add))
