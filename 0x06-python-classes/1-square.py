@@ -4,8 +4,6 @@
 
 class Square:
     """Square class with a method to print a square."""
-    
-
     def __init__(self, size):
         """Constructor.
         Args:
