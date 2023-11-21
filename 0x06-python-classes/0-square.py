@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-class Square
+class Square:
     def print_square(self):
         print("{}")
