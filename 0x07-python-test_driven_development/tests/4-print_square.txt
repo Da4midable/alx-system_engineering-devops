@@ -1,0 +1,26 @@
+>>> print_square = __import__('4-print_square').print_square
+
+>>> print_square(4)
+####
+####
+####
+####
+
+
+
+>>> size = isinstance(4, float) and 4 < 0
+>>> print_square(size)
+Traceback (most recent call last):
+ ...
+TypeError: size must be an integer
+
+>>> size = not isinstance(4, int)
+>>> print_square(size)
+Traceback (most recent call last):
+ ...
+TypeError: size must be an integer
+
+>>> print_square(not 4)
+Traceback (most recent call last):
+ ...
+TypeError: size cannot be empty

@@ -1,0 +1,19 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("Saheed", "Yusuf")
+My name is Saheed Yusuf
+
+>>> say_my_name(not isinstance("Yusuf", str), "Saheed")
+Traceback (most recent call last):
+ ...
+TypeError: first_name must be a string
+
+>>> say_my_name("Saheed", not isinstance("Yusuf", str))
+Traceback (most recent call last):
+ ...
+TypeError: last_name must be a string
+
+>>> say_my_name("", "Yusuf")
+Traceback (most recent call last):
+ ...
+ValueError: first_name must not be empty
