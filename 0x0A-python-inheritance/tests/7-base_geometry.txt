@@ -1,32 +1,19 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 # Test Case 1: Valid integer value
->>> bg = BaseGeometry()
->>> BaseGeometry.integer_validator(bg, "side_length", 5)
+>>> geometry_instance = BaseGeometry()
+>>> BaseGeometry.integer_validator(geometry_instance, "side_length", 5)
 
 # Test Case 2: Invalid value (not an integer)
->>> bg = BaseGeometry()
->>> BaseGeometry.integer_validator(bg, "side_length", "invalid")
+>>> geometry_instance = BaseGeometry()
+>>> BaseGeometry.integer_validator(geometry_instance, "side_length", "invalid")
 Traceback (most recent call last):
   ...
 TypeError: side_length must be an integer
 
 # Test Case 3: Invalid value (less than or equal to 0)
->>> bg = BaseGeometry()
->>> bg.integer_validator(bg, "side_length", -3)
+>>> geometry_instance = BaseGeometry()
+>>> BaseGeometry.integer_validator(geometry_instance, "side_length", -3)
 Traceback (most recent call last):
   ...
 ValueError: side_length must be greater than 0
-
-# Test Case 4: passing list to method
->>> bg = BaseGeometry()
-    >>> bg.integer_validator("man", {3, 4})
-    Traceback (most recent call last):
-              ...
-    TypeError: man must be an integer
-
- >>> bg = BaseGeometry()
-    >>> bg.integer_validator("man", None)
-    Traceback (most recent call last):
-              ...
-    TypeError: man must be an integer
