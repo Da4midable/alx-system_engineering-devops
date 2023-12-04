@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """
-Module: my_module
-~~~~~~~~~~~~~~~~~
 
 A module containing a function to check if an object is of a specific class.
 
