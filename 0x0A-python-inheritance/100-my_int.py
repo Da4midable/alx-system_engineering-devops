@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 
 A module containing the `MyInt` class, a custom integer class with modified
