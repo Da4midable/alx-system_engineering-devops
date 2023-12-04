@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module for dynamically adds a new attribute to an object."""
+
+
 def add_attribute(obj, att, value):
     """
     Dynamically adds a new attribute to an object.
