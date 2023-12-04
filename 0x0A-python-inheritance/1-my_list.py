@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""module of a function that sorts a list"""
+"""module of a an inherited list of class MyList"""
 
 
 class MyList(list):
