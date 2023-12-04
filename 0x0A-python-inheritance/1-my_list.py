@@ -1,9 +1,12 @@
 #!/usr/bin/python3
+"""module of a function that sorts a list"""
+
+
 class MyList(list):
     """
     Customized list class with additional functionality.
 
-    This class inherits from the built-in list class and adds a method
+    This class inherits the built-in list class and adds a method
     for printing the sorted elements of the list. It enforces that the
     elements in the list must be integers.
 

@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""module of a function that looks up an object's attribute"""
+
+
 def lookup(obj):
     """
     Retrieve the list of attributes and methods of an object.
