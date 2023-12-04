@@ -1,3 +1,16 @@
 #!/usr/bin/python3
 def lookup(obj):
-    return (dir(obj))
+    """
+    Retrieve the list of attributes and methods of an object.
+
+    This function takes an object as an argument and returns a list
+    containing the names of attributes and methods associated with the object.
+
+    Parameters:
+    - obj: Any Python object whose attributes and methods are to be retrieved.
+
+    Returns:
+    A list containing the names of attributes and methods of the given object.
+
+    """
+    return dir(obj)
