@@ -8,14 +8,6 @@ A module containing a base class for geometry-related functionality.
 Classes:
 - BaseGeometry: A base class for geometry-related functionality.
 
-Usage:
->>> from my_module import BaseGeometry
-
->>> geometry_instance = BaseGeometry()
->>> geometry_instance.area()
-Traceback (most recent call last):
-  ...
-Exception: area() is not implemented
 """
 
 
@@ -34,14 +26,7 @@ class BaseGeometry:
     - integer_validator(name, value): Validate that a value is an integer
     greater than 0, raising appropriate errors if conditions are not met.
 
-    Usage:
-    >>> from my_module import BaseGeometry
 
-    >>> geometry_instance = BaseGeometry()
-    >>> geometry_instance.area()
-    Traceback (most recent call last):
-      ...
-    Exception: area() is not implemented
     """
 
     def area(self):
@@ -55,14 +40,7 @@ class BaseGeometry:
         - Exception: Indicates that the method is not implemented
         in the base class.
 
-        Example:
-        >>> from my_module import BaseGeometry
 
-        >>> geometry_instance = BaseGeometry()
-        >>> geometry_instance.area()
-        Traceback (most recent call last):
-          ...
-        Exception: area() is not implemented
         """
         raise Exception("area() is not implemented")
 
@@ -78,19 +56,6 @@ class BaseGeometry:
         - TypeError: If the value is not an integer.
         - ValueError: If the value is less than or equal to 0.
 
-        Example:
-        >>> from my_module import BaseGeometry
-
-        >>> geometry_instance = BaseGeometry()
-        >>> geometry_instance.integer_validator("side_length", 5)
-        >>> geometry_instance.integer_validator("side_length", "invalid")
-        Traceback (most recent call last):
-          ...
-        TypeError: side_length must be an integer
-        >>> geometry_instance.integer_validator("side_length", -3)
-        Traceback (most recent call last):
-          ...
-        ValueError: side_length must be greater than 0
         """
         if type(value) != int:
             raise TypeError("{:s} must be an integer".format(name))
