@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def add_attribute(obj, att, value):
     """
     Dynamically adds a new attribute to an object.
