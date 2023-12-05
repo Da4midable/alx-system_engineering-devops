@@ -6,7 +6,8 @@ Module: file_operations
 A module providing file operations in Python.
 
 Functions:
-- append_write(filename="", text=""): Appends text to a file.
+- append_write(filename="", text=""): Appends text to a file
+and returns number of characters written.
 
 """
 
@@ -28,8 +29,5 @@ def append_write(filename="", text=""):
     >>> append_write("example.txt", "This is additional text.")
     """
 
-    try:
-        with open(filename, 'a') as file:
-            file.write(text)
-    except FileNotFoundError:
-        raise FileNotFoundError(f"The file '{filename}' was not found.")
+    with open(filename, 'a') as file:
+           return file.write(text)
