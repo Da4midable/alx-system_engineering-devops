@@ -31,6 +31,6 @@ def read_file(filename=""):
     Prompts the user to enter a file path and reads and prints
     the content of the specified file.
     """
-    with open(filename, 'r', encoding='utf-8') as file:
+    with open(filename, 'r', encoding='UTF-8') as file:
         file_content = file.read()
-        print(file_content.strip())
+        print(file_content[:-1])
