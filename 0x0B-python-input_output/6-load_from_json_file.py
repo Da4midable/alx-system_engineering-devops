@@ -1,4 +1,14 @@
 #!/usr/bin/python3
+"""
+Module: 6-load_from_json_file
+
+A module containing a function to load a JSON file
+and return the deserialized Python object.
+
+Functions:
+- load_from_json_file(filename): Load a JSON file
+and return the deserialized Python object.
+"""
 
 import json
 
