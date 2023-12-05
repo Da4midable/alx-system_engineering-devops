@@ -1,5 +1,6 @@
-0x0A. Python - Inheritance
+I apologize for the confusion. I misunderstood your request. Let's create a README file for your project. Here's a basic structure based on the information you provided:
 
+```markdown
 # ALX Higher Level Programming - Python Inheritance
 
 ## Description
@@ -10,9 +11,10 @@ To install this project, you can clone the repository using the following comman
 
 ```bash
 git clone https://github.com/Da4midable/alx-higher_level_programming/tree/main/0x0A-python-inheritance
+```
 
 ## Usage
-After cloning the repository, you can navigate to the 0x0A-python-inheritance directory to access the project files. You can run the Python files to see the concepts of Python inheritance in action.
+After cloning the repository, you can navigate to the `0x0A-python-inheritance` directory to access the project files. You can run the Python files to see the concepts of Python inheritance in action.
 
 ## Contributing
 This project is maintained by Saheed Kehinde Yusuf. Contributions are not currently being accepted.
