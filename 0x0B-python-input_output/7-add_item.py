@@ -14,11 +14,9 @@ if __name__ == "__main__":
     load_json_file = __import__('6-load_from_json_file').load_from_json_file
     save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
-    args = sys.argv[1:]
-    my_list = []
-
-    for arg in args:
-        my_list.append(arg)
-
+    try:
+        my_list = load_json_file("add_item.json")
+    except FileNotFoundError:
+        my_list = []
+    my_list.extend(sys.argv[1:])
     save_to_json_file(my_list, "add_item.json")
-    loaded_list = load_json_file("add_item.json")
