@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def class_to_json(obj):
     """
     Convert a class instance to a JSON representation.
