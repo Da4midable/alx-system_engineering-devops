@@ -6,6 +6,7 @@ A module providing a function for writing text to a file.
 
 Functions:
 - write_file(filename="", text=""): Write the specified text to specified file
+and returns number of characters written
 
 """
 
@@ -29,4 +30,4 @@ def write_file(filename="", text=""):
     Prompts user to enter file path and writes 'Lorem ipsum' to specified file
     """
     with open(filename, 'w') as file:
-        file.write(text)
+        return file.write(text)
