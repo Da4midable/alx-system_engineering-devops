@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Script to add command line arguments to a Python list,
-save the list as a JSON representation in a file, and then load it back.
+save the list as a JSON representation in a file, and then load it back
 
 Dependencies:
 - load_from_json_file function from 6-load_from_json_file.py
