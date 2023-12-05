@@ -31,9 +31,6 @@ def read_file(filename=""):
     Prompts the user to enter a file path and reads and prints
     the content of the specified file.
     """
-    try:
-        with open(filename, 'r') as file:
-            file_content = file.read()
-            print(file_content)
-    except FileNotFoundError:
-        print(f"Error: File '{filename}' not found.")
+    with open(filename, 'r') as file:
+        file_content = file.read()
+        print(file_content[:-1])
