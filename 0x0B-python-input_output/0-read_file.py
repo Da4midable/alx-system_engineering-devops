@@ -34,6 +34,6 @@ def read_file(filename=""):
     try:
         with open(filename, 'r') as file:
             file_content = file.read()
-            print(file_content[:-1])
+            print(file_content)
     except FileNotFoundError:
         print(f"Error: File '{filename}' not found.")
