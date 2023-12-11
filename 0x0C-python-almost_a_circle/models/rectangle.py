@@ -31,6 +31,7 @@ Methods:
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """A class representing a rectangle with width, height, position,
     and unique identifier."""
@@ -68,7 +69,6 @@ class Rectangle(Base):
         self.validate_value('width', value, min_value=0)
         self.__width = value
 
-    
     @property
     def height(self):
         """Get the height of the rectangle."""
@@ -85,7 +85,6 @@ class Rectangle(Base):
             TypeError: If height is not an integer.
             ValueError: If height is less than or equal to 0.
         """
-        
         self.validate_value('height', value, min_value=0)
         self.__height = value
 
@@ -105,7 +104,6 @@ class Rectangle(Base):
             TypeError: If x is not an integer.
             ValueError: If x is less than 0.
         """
-        
         self.validate_value('x', value, min_value=-1)
         self.__x = value
 
@@ -151,7 +149,11 @@ class Rectangle(Base):
         Returns:
             str: A formatted string representing the rectangle.
         """
-        return f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return (
+            f"[{self.__class__.__name__}] "
+            f"({self.id}) {self.x}/{self.y} - "
+            f"{self.width}/{self.height}"
+        )
 
     def update(self, *args, **kwargs):
         """Update attributes of the rectangle with variable arguments

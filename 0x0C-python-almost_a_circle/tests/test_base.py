@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module for testing Base class"""
+
 
 import unittest
 import json
@@ -6,6 +8,17 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    """
+    Unit tests for the Base class.
+
+    Test cases:
+    - Initialization with default and custom IDs.
+    - JSON string conversion with None and list input.
+    - File saving with None, valid list, and invalid object.
+    - JSON string deserialization with None and valid JSON.
+    - Object creation for unsupported, Rectangle, and Square classes.
+    - File loading with no file and existing file.
+    """
 
     def test_init_default_id(self):
         """Test if id is assigned properly when not provided."""

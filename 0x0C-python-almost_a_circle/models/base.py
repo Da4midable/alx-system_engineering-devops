@@ -20,10 +20,11 @@ Methods:
 
 import json
 
+
 class Base:
     """A class providing functionality for managing unique identifiers
     and file I/O operations."""
-    
+
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -40,7 +41,6 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
-    
     def to_json_string(list_dictionaries):
         """Convert a list of dictionaries to a JSON string.
 
@@ -62,7 +62,8 @@ class Base:
         Returns:
             None
         """
-        list_objs = list(filter(lambda obj: isinstance(obj, cls), list_objs or []))
+        list_objs = list(filter(lambda obj: isinstance(obj, cls),
+                                list_objs or []))
         json_list = [obj.to_dictionary() for obj in list_objs]
         json_string = cls.to_json_string(json_list)
         with open(cls.__name__ + ".json", "w") as file:
