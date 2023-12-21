@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#  This is a Bash script that displays numbers in a list format from 1 to 100 and
+# displays "FizzBuzz" when the number is a multiple of 3 and 5
+# displays "Fizz" when the number is multiple of 3
+# displays "Buzz" when the number is a multiple of 5
+# Otherwise displays number
+
+i=1
+
+while [ $i -le 100 ]; do
+    mul_3=$(( i % 3 ))
+    mul_5=$(( i % 5 ))
+    mul_15=$(( i % 15 ))
+
+    if [ $mul_15 -eq 0 ]; then
+        echo "FizzBuzz"
+    elif [ $mul_3 -eq 0 ]; then
+        echo "Fizz"
+    elif [ $mul_5 -eq 0 ]; then
+        echo "Buzz"
+    else
+        echo "$i"
+    fi
+
+    (( i++ ))
+done
