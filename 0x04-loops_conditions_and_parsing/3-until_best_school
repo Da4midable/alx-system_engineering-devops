@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This is an until loop construct that prints "Best School" ten times.
+
+num=10
+until [ $num -lt 1 ]
+do
+	echo "Best School"
+	num=$(( num -1  ))
+done
