@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This a Bash script that loops from 1 to 10 and displays 4 and then bad luck from China for the 4th loop iteration, 9 and then bad luck from Japan for the 9th loop iteration, and 17 and then bad luck from Italy for the 17th loop iteration.
+# This a Bash script that loops from 1 to 10 and displays 4 and then bad luck from China for the 4th loop iteration, 9 and then bad luck from Japan for the 9th loop iteration, and 17 and then bad luck from Italy for the 17th loop iteration
 num=1
 while [ $num -le 20 ]; do
 
