@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # This  a Bash script that displays content of current directory in list format where only part of name after first dash is displayed
 list=$(ls)
 for file in $list; do
