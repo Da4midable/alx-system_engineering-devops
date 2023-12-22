@@ -3,5 +3,5 @@
 
 pid=$(pgrep -f "4-to_infinity_and_beyond")
 
-    kill -15 "$pid"
+    killall -15 "$pid"
     echo "Terminated"
