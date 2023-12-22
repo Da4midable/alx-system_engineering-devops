@@ -7,5 +7,5 @@ if [ -z "$pid" ]; then
     echo "Process not found."
 else
     kill -15 "$pid"
-    echo "Terminated."
+    echo "Terminated"
 fi
