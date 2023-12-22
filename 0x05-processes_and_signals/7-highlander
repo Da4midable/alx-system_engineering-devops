@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This is  a Bash script that displays:
+# "To infinity and beyond" indefinitely, with a sleep 2 in between each iteration
+# "I am invincible!!!"" when receiving a SIGTERM signal
+cleanup_function() {
+    echo "I am invincible!!!"
+    exit
+}
+
+trap 'cleanup_function' SIGTERM
+
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
