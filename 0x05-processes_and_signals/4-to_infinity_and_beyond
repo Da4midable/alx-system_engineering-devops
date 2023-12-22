@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #This is a Bash script that displays "To infinity and beyond" indefinitely, with 2 seconds in between each iteration.
-num=1
-while [ $num -lt 2 ]; do
+
+until false; do
 	echo "To infinity and beyond"
 	sleep 2
 done

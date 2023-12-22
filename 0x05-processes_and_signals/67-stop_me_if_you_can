@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # This is a Bash script that uses "pkill" to stop 4-to_infinity_and_beyond process.
 
-if pkill -f "7-highlander"; then
-    echo "Terminated"
-fi
+pkill -f "7-highlander"
