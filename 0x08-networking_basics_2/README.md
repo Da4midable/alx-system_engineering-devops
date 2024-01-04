@@ -1,5 +1,3 @@
-Hello, this is Copilot. I can help you write a professional README file for your GitHub project. Here is a possible README file for the Networking Basics directory:
-
 # Networking Basics
 
 This directory contains scripts and answers for the Networking Basics project at ALX.
