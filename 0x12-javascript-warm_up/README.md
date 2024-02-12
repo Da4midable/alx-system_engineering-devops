@@ -1,5 +1,3 @@
-Sure, here's a basic `README.md` for your repository:
-
 ```markdown
 # JavaScript Warm Up
 
