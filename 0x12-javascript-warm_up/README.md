@@ -1,7 +1,7 @@
 ```markdown
 # JavaScript Warm Up
 
-This repository contains exercises and projects related to JavaScript, part of the `0x12` section of the [ALX Higher Level Programming](https://github.com/Da4midable/alx-higher_level_programming/tree/main/0x12-javascript-warm_up) curriculum.
+This repository contains exercises and projects related to JavaScript, part of the `ALX Higher Level Programming(https://github.com/Da4midable/alx-higher_level_programming/tree/main/0x12-javascript-warm_up) curriculum.
 
 ## Table of Contents
 
