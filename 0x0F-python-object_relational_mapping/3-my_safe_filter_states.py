@@ -7,9 +7,10 @@ import sys
 
 if __name__ == "__main__":
     base = MySQLdb.connect(host="localhost", user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
+                           passwd=sys.argv[2], db=sys.argv[3], port=3306)
     iterator = base.cursor()
-    iterator.execute("SELECT * FROM states")
+    match = sys.argv[4]
+    iterator.execute("SELECT * FROM states WHERE name LIKE %s", (match, ))
     rows = iterator.fetchall()
     for row in rows:
         print(row)
