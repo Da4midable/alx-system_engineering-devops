@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 # Script removes password authentication
-cat ~/.ssh/school.pub | ssh ubuntu@100.26.120.236 "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys"
+Host *
+	PasswordAuthentication no
+	IdentityFile ~/.ssh/school
+	SendEnv LANG LC_*
+	HashKnownHosts yes
+	GSSAPIAuthentication yes
+	GSSAPIDelegateCredentials no
