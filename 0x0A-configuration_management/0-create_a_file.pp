@@ -1,4 +1,5 @@
-#creates a file in /tmp
+#!/usr/bin/env bash
+## creates a file in /tmp
 file { '/tmp/school':
   ensure  => file,
   mode    => '0744',
