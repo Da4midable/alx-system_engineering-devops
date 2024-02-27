@@ -1,0 +1,18 @@
+#!/bin/bash
+# Configure redirection
+echo "
+server {
+    listen 80;
+    server_name localhost;
+
+    location /redirect_me {
+        return 301 https://example.com/new_location;
+    }
+
+    # Other configuration directives...
+}
+" > /etc/nginx/sites-available/redirect_me
+
+rm /etc/nginx/sites-enabled/default 2>/dev/null
+ln -s /etc/nginx/sites-available/redirect_me /etc/nginx/sites-enabled/
+nginx -t && systemctl restart nginx
