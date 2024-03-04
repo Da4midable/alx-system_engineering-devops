@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Ignore SC2154 for shellcheck
+# shellcheck disable=SC2154
+
+HOSTNAME=$(hostname)
+
+echo "add_header X-Served-By $HOSTNAME;" | sudo tee -a /etc/nginx/conf.d/default.conf
+nginx -t
+service nginx restart
