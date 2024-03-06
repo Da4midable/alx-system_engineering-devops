@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# run Apache on the container and return a page containing Hello Holberton when querying the root of it
+# runs Apache on the container and returns a page containing Hello Holberton when querying the root of it
 
 docker run -p 8080:80 -d -it holbertonschool/265-0
 
@@ -9,12 +9,14 @@ if docker ps | grep -q "holbertonschool/265-0"; then
     container_id=$(docker ps | grep "holbertonschool/265-0" | awk '{print $1}')
 
     docker exec -it "$container_id" /bin/bash << EOF
-    cd /etc/apache2/sites-available
-    sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\n\t\t\tProxyPass \\/ http:\/\/localhost:8080\//g' 000-default.conf
-    service apache2 restart
-    EOF
 
-    if docker exec -it "$container_id" service apache2 status | grep -q "apache2 is running"; then
-        echo "apache2 is running"
-    fi
+    apt-get update
+    apt-get install -y apache2
+
+    cd /etc/apache2/sites-available
+
+    sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\n\t\t\tProxyPass \\/ http:\/\/localhost:8080\//g' 000-default.conf
+
+    service apache2 start
+EOF
 fi
