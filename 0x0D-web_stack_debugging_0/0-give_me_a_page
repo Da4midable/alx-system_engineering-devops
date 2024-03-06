@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# run Apache on the container and return a page containing Hello Holberton when querying the root of it
+
+CONTAINER_ID=$(docker ps -q)
+
+docker exec -it $CONTAINER_ID bash -c "apt-get update && apt-get install -y apache2"
+
+echo "Hello Holberton" > index.html
+
+docker cp index.html $CONTAINER_ID:/var/www/html/
+
+docker exec -it $CONTAINER_ID bash -c "service apache2 start"
