@@ -1,12 +1,19 @@
 #!/usr/bin/env bash
 # run Apache on the container and return a page containing Hello Holberton when querying the root of it
 
-CONTAINER_ID=$(docker ps -q)
+docker run -p 8080:80 -d -it holbertonschool/265-0
 
-docker exec -it $CONTAINER_ID bash -c "apt-get update && apt-get install -y apache2"
+sleep 5
 
-echo "Hello Holberton" > index.html
+if docker ps | grep -q "holbertonschool/265-0"; then
+    container_id=$(docker ps | grep "holbertonschool/265-0" | awk '{print $1}')
 
-docker cp index.html $CONTAINER_ID:/var/www/html/
+    docker exec -it "$container_id" /bin/bash << EOF
 
-docker exec -it $CONTAINER_ID bash -c "service apache2 start"
+    cd /etc/apache2/sites-available
+
+    sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\n\t\t\tProxyPass \\/ http:\/\/localhost:8080\//g' 000-default.conf
+
+    service apache2 restart
+EOF
+fi
