@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
 This script uses a REST API to fetch information about an
-employee's TODO list progress and exports the data to a CSV file.
+employee's TODO list progress and exports the data to a CSV and JSON file.
 It takes an employee ID as an input and displays the progress
 in a specific format.
 """
 
 import csv
+import json
 import requests
 import sys
 
@@ -44,6 +45,14 @@ def main(user_id):
         csvwriter = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in todos:
             csvwriter.writerow([user_id, user.get('username'), task.get('completed'), task.get('title')])
+
+
+    tasks_list = [{"task": task.get('title'),
+                   "completed": task.get('completed'),
+                   "username": user.get('username')} for task in todos]
+
+    with open(f'{user_id}.json', 'w') as jsonfile:
+        json.dump({str(user_id): tasks_list}, jsonfile)
 
 
 if __name__ == "__main__":
