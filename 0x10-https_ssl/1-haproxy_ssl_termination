@@ -26,8 +26,9 @@ defaults
   timeout client 60s
   timeout server 60s
 
-frontend http_front
+frontend httpandhttps
   bind *:80
+  bind *:443 ssl crt /home/ubuntu/haproxy.pem
   mode http
   stats uri /haproxy?stats
   default_backend http_back
